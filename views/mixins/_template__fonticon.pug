@@ -1,0 +1,5 @@
+ul
+    <% _.each(glyphs, function(glyph) {%>
+        li
+            span.<%= className %>__<%= glyph.name %>=" .<%=className %>__<%= glyph.name %>"<% 
+    }); %>

@@ -1,0 +1,15 @@
+// ========================================= //
+// links
+// ========================================= //
+
+a {
+    text-decoration: none;
+}
+
+.o-link__underline {
+    @include link__underline($black, $black, 1);
+}
+
+.o-link__box {
+    @include link__box(1, $black);
+}

@@ -1,0 +1,35 @@
+// ========================================= //
+// ui
+// ========================================= //
+
+::-moz-selection {
+    color: $selectionColor;
+    background: $selectionBackground;
+}
+
+::selection {
+    color: $selectionColor;
+    background: $selectionBackground;
+}
+
+* {
+    outline: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    &.is-fixed {
+        overflow: hidden;
+    }
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
+}

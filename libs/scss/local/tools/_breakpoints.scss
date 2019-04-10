@@ -1,0 +1,39 @@
+// ========================================= //
+// breakpoints
+// ========================================= //
+
+
+// Breakpoint greater than
+@mixin bp-gt($device-width) {
+    @media screen and (min-width: $device-width) {
+        @content
+    }
+};
+
+// Breakpoint lower than
+@mixin bp-lt($device-width) {
+    @media screen and (max-width: $device-width) {
+        @content
+    }
+};
+
+// Breakpoint between
+@mixin bp-bt($min-device-width, $max-device-width) {
+    @media screen and (min-width: $min-device-width) and (max-width: $max-device-width) {
+        @content
+    }
+};
+
+// Print
+@mixin print() {
+    @media print {
+        @content
+    }
+};
+
+// For IE detection (use with caution /!\)
+@mixin is-ie() {
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        @content
+    }
+};

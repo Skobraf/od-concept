@@ -1,0 +1,32 @@
+// ========================================= //
+// wysiwyg
+// ========================================= //
+
+.c-wysiwyg {
+    @import "_wysiwygContent";
+}
+
+.c-table__wrapper {
+    width: 100%;
+    overflow-y: auto;
+    _overflow: auto;
+    margin: 0 0 $gutter;
+
+    &::-webkit-scrollbar
+    {
+        -webkit-appearance: none;
+        width: rem(14);
+        height: rem(14);
+    }
+
+    &::-webkit-scrollbar-thumb
+    {
+        border-radius: rem(8);
+        border: rem(3) solid $white;
+        background-color: $mainBranding;
+    }
+
+    table {
+        margin-bottom: 0;
+    }
+}

@@ -1,0 +1,135 @@
+// ========================================= //
+// paginate
+// ========================================= //
+
+[class*='c-paginate'] {
+    position: relative;
+    padding: rem($paginate--padding) 0;
+    background: $paginate--background;
+
+    ol {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            display: inline-block;
+            margin-left: rem(5);
+            margin-right: rem(5);
+            vertical-align: top;
+            transition: $ease--03;
+
+            a {
+                padding-left: rem(6);
+                padding-right: rem(6);
+                transition: $ease--03;
+
+                @include link__box(1, $paginate--color);
+            }
+
+            &, a {
+                font-family: $paginate--fontfamily;
+                font-size: rem($paginate--fontsize);
+                color: $paginate--color;
+            }
+
+            &:hover a {
+                color: $paginate--color;
+            }
+
+            &.current {
+                padding-left: rem(6);
+                padding-right: rem(6);
+                border-bottom: solid rem(1) $paginate--color;
+            }
+        }
+    }
+
+//paginate scroll in small
+    &[class*='--responsive'] {
+        ol:first-child {
+            @include bp-lt($small){
+                display: flex;
+                flex-flow: row wrap;
+                align-items: center;
+                width: 100%;
+                position: relative;
+            }
+            //-- animation scrollhand
+            &::before {
+                @include bp-lt($small){
+                    position: absolute;
+                    display: block;
+                    //-- icone exemple
+                    content: '\EA26';
+                    bottom: rem(-15);
+                    left: 50%;
+                    z-index: $zindex--hover;
+                    transform: translateX(0) translateZ(0);
+                    color: $mainBranding;
+                    font-family: $iconFont;
+                    font-size: rem(30);
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: $ease--03;
+                    animation: none;
+                    pointer-events: none;
+                    text-rendering: optimizeSpeed;
+                }
+            }
+
+            &:not(:hover) {
+                &:not(:active) {
+                    &:not(:focus) {
+                        ul {
+                            @include bp-lt($small){
+                                opacity: 0.5;
+                                @include animation('swipeHolder 4s 1');
+                                animation-fill-mode: forwards;
+                            }
+                        }
+
+                        &::before {
+                            @include bp-lt($small){
+                                opacity: 1;
+                                visibility: visible;
+                                @include animation('swipe 2s 2');
+                                animation-delay: 1s;
+                                animation-fill-mode: forwards;
+                            }
+                        }
+                    }
+                }
+            }
+            //-- END animation scrollhand
+        }
+
+        li {
+            vertical-align: middle;
+        }
+
+        .c-numbers {
+            @include bp-lt($small){
+                padding: rem(5) 0;
+                margin: 0;
+                // remplacer par la largeur du next & prev
+                max-width: calc(100% - 71px);
+                overflow: hidden;
+                overflow-x: scroll;
+            }
+
+            > ol {
+                @include bp-lt($small){
+                    width: auto;
+                    display: flex;
+                    flex-flow: row;
+
+                    &::before {
+                        content: none;
+                    }
+                }
+            }
+        }
+
+    }
+}

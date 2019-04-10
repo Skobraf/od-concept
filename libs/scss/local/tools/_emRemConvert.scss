@@ -1,0 +1,15 @@
+// ========================================= //
+// emRemConvert
+// ========================================= //
+
+$browser-context: 16; // Default
+
+// Convert px to em
+@function em($pixels, $context: $browser-context) {
+    @return #{$pixels/$context}em
+}
+
+// Convert px to rem
+@function rem($pixels, $context: $browser-context) {
+    @return #{$pixels/$context}rem
+}

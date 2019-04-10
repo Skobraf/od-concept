@@ -1,0 +1,156 @@
+.c-row {
+    max-width: $layoutWidth;
+    display: flex;
+    width: 100%;
+    flex-flow: row wrap;
+    margin: 0 auto;
+
+    &:not(.not-pdg) {
+        padding: 0 rem(20);
+    }
+
+    &.c-row--full {
+        max-width: 100%;
+    }
+
+    &,
+    .c-col {
+        &.align-center {
+            justify-content: center;
+        }
+
+        &.align-left {
+            justify-content: flex-start;
+        }
+
+        &.align-right {
+            justify-content: flex-end;
+        }
+
+        &.align-edges {
+            justify-content: space-between;
+        }
+
+        &.align-middle {
+            align-items: center;
+        }
+
+        &.align-top {
+            align-items: flex-start;
+            align-content: flex-start;
+        }
+
+        &.align-bottom {
+            align-items: flex-end;
+        }
+
+        &.not-flex {
+            display: block;
+        }
+
+        &.c-col--half,
+        .c-col--half {
+            @include m-flex__percents(50);
+
+            @include bp-lt($xmedium) {
+                @include m-flex__percents(100);
+            }
+        }
+
+        &.c-col--third,
+        .c-col--third {
+            @include m-flex__grid(4);
+
+            @include bp-lt($xmedium) {
+                @include m-flex__grid(12);
+            }
+
+            &.on-column {
+                flex-flow: column wrap;
+            }
+        }
+    }
+
+    .c-col {
+        display: flex;
+        width: 100%;
+
+        // Fullwidth column
+        &.c-col--full {
+            @include m-flex__percents(100);
+        }
+
+        &:not(.not-pdg) {
+            padding: 0 rem(10);
+        }
+
+        &.wrap {
+            flex-flow: row wrap;
+        }
+
+        &.on-column {
+            flex-flow: column wrap;
+        }
+
+        // Reset flex
+        &.not-flex {
+            display: block;
+        }
+
+        $largeCols: 12, 10, 9, 8, 7, 6, 5, 4, 3, 2;
+        $desktopCols: 12, 10, 9, 8, 7, 6, 5, 4, 3, 2;
+        $mediumCols: 10, 12, 10, 9, 8, 6, 3, 4, 5;
+        $xmediumCols: 10, 12, 10, 9, 8, 6, 3, 4, 5;
+        $tabletCols: 8, 4, 6, 12;
+        $smallCols: 10, 12, 6, 4;
+
+        @each $size in $largeCols {
+            &.c-l__#{$size} {
+                @include m-flex__grid($size);
+            }
+        }
+
+        @each $size in $desktopCols {
+            &.c-d__#{$size} {
+                @include bp-lt($desktop) {
+                    @include m-flex__grid($size);
+                }
+            }
+        }
+        @each $size in $mediumCols {
+            &.c-m__#{$size} {
+                @include bp-lt($medium) {
+                    @include m-flex__grid($size);
+                }
+            }
+        }
+        @each $size in $xmediumCols {
+            &.c-xm__#{$size} {
+                @include bp-lt($xmedium) {
+                    @include m-flex__grid($size);
+                }
+            }
+        }
+        @each $size in $tabletCols {
+            &.c-t__#{$size} {
+                @include bp-lt($tablet) {
+                    @include m-flex__grid($size);
+                }
+            }
+        }
+        @each $size in $smallCols {
+            &.c-s__#{$size} {
+                @include bp-lt($small) {
+                    @include m-flex__grid($size);
+                }
+            }
+        }
+
+        &:not(.not-flex) {
+            > [class*="c-title"],
+            > p {
+                width: 100%;
+            }
+        }
+    }
+}

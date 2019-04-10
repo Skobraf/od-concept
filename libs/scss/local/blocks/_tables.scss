@@ -1,0 +1,30 @@
+// ========================================= //
+// tables
+// ========================================= //
+
+// Fallback vertical align middle non flexbox
+.o-table {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+[class*='o-table__cell'] {
+    display: table-cell;
+
+    &[class*='--valignMiddle'] {
+        vertical-align: middle;
+
+        &[class*='--tabletDown'] {
+            vertical-align: top;
+
+            @include bp-lt($tablet) {
+                vertical-align: middle;
+            }
+        }
+    }
+
+    &[class*='--valignBottom'] {
+        vertical-align: bottom;
+    }
+}

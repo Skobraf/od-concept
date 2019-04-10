@@ -1,0 +1,116 @@
+// ========================================= //
+// Helpers
+// ========================================= //
+
+//--------- Clearing ---------//
+// For clearing natives <ul> properties and bullets
+@mixin m-clear__ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    // Edge fix
+    list-style-type: none;
+    // If not working :
+    // list-style-image: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7);
+}
+// For clearing natives <button> properties
+@mixin m-clear__button {
+    background: none;
+    border: none;
+    outline: none;
+    appearance: none;
+}
+
+// For clearing setted position properties to default
+@mixin m-clear__positions {
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+}
+
+//--------- Init properties ---------//
+// Set basics properties to an element (for example flexing items in IE)
+@mixin m-init__block {
+    width: 100%;
+    display: block;
+}
+
+// Set basics properties to a pseudo-element (::before or ::after)
+@mixin m-init__pseudoElements {
+    position: absolute;
+    content: '';
+    display: block;
+    flex: none;
+}
+
+// Set basics properties to a background-image in cover or in contain
+@mixin m-init__bkg--cover {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+@mixin m-init__bkg--contain {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+// Set basics custom background properties in parameters
+// $path type : name of a picture
+// $repeat values : repeat-x, repeat-y, repeat, space, round, no-repeat
+// $position values : top, left, center, right, top, bottom, <percentage>
+// $size values : <percentage>, <number>px, rem(<number)
+@mixin m-init__bkg--object($path, $repeat, $position, $size) {
+    background: {
+        image: url(#{$img}#{$path});
+        repeat: $repeat;
+        position: $position;
+        size: $size;
+    }
+}
+
+// Center an positionned element and add custom transform (like skew, rotate, etc)
+// parameter type : string (CSS transform propertie)
+@mixin m-center__position($transform) {
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%) $transform;
+}
+
+// Set percentage width/height of parent to a flex-item
+// parameter type : <number>
+@mixin m-flex__percents($percent) {
+    $percent : $percent + '%';
+    flex: 0 0 #{$percent};
+    max-width: #{$percent};
+}
+
+//--------- Flex ---------//
+// Same as flexPercents but in 12 columns grid context
+// parameter type : <number>
+@mixin m-flex__grid($percent) {
+    flex: 0 0 percentage($percent/12);
+    max-width: percentage($percent/12);
+}
+
+// Same as flexPercents but with custom grid context : dividen/divisor = 1 / 2 = 50%
+@mixin m-flex__custom-grid($dividend, $divisor) {
+    flex: 0 0 percentage($dividend/$divisor);
+    max-width: percentage($dividend/$divisor);
+}
+
+// Same as flexPercents but with custom value (not using flex shorthand because of IE issue with calc())
+// $value values :  rem(<number>), <number>px, CSS calc(<number>)
+@mixin m-flex__calc($value) {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: $value;
+    max-width: $value;
+}
+
+// For clearing setted flex properties
+@mixin m-flex__clear {
+    max-width: none;
+    flex: auto;
+}

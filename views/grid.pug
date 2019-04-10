@@ -1,0 +1,158 @@
+//- layout
+extends layouts/_default
+
+//- settings
+append vars
+    - var pageTitle = 'myAwesomePageTitle'
+    - var pageClass = ''
+    - var headLess = true
+
+append body
+    style(type='text/css').
+        .c-col {
+            padding-top: .75rem;
+            padding-bottom: .75rem;
+            background-color: rgba(86,61,124,.15);
+            border: 1px solid rgba(86,61,124,.2);
+            height: 50px;
+        }
+        .c-col p, h1 {
+            font-family: 'Arial';
+        }
+
+        .c-row:not(.c-wysiwyg) {
+            background: rgba(255,0,0,.1);
+        }
+
+    section
+        .c-row.c-wysiwyg
+            h1 Column
+
+        .c-row
+            .c-col.wrap.c-l__2.align-middle
+                p c-col wrap c-l__2
+            .c-col.wrap.c-l__2.align-middle
+                p c-col wrap c-l__2
+            .c-col.wrap.c-l__2.align-middle
+                p c-col wrap c-l__2
+            .c-col.wrap.c-l__2.align-middle
+                p c-col wrap c-l__2
+            .c-col.wrap.c-l__2.align-middle
+                p c-col wrap c-l__2
+            .c-col.wrap.c-l__2.align-middle
+                p c-col wrap c-l__2
+
+        .c-row
+            .c-col.wrap.c-l__3.align-middle
+                p c-col wrap c-l__3
+            .c-col.wrap.c-l__3.align-middle
+                p c-col wrap c-l__3
+            .c-col.wrap.c-l__3.align-middle
+                p c-col wrap c-l__3
+            .c-col.wrap.c-l__3.align-middle
+                p c-col wrap c-l__3
+
+        .c-row
+            .c-col.wrap.c-l__4.align-middle
+                p c-col wrap c-l__4
+            .c-col.wrap.c-l__4.align-middle
+                p c-col wrap c-l__4
+            .c-col.wrap.c-l__4.align-middle
+                p c-col wrap c-l__4
+
+        .c-row
+            .c-col.wrap.c-l__5.align-middle
+                p c-col wrap c-l__5
+            .c-col.wrap.c-l__5.align-middle
+                p c-col wrap c-l__5
+            .c-col.wrap.c-l__2.align-middle
+                p c-col wrap c-l__2
+
+        .c-row
+            .c-col.wrap.c-l__6.align-middle
+                p c-col wrap c-l__6
+            .c-col.wrap.c-l__6.align-middle
+                p c-col wrap c-l__6
+
+        .c-row
+            .c-col.wrap.c-l__7.align-middle
+                p c-col wrap c-l__7
+            .c-col.wrap.c-l__5.align-middle
+                p c-col wrap c-l__5
+
+        .c-row
+            .c-col.wrap.c-l__8.align-middle
+                p c-col wrap c-l__8
+            .c-col.wrap.c-l__4.align-middle
+                p c-col wrap c-l__4
+
+        .c-row
+            .c-col.wrap.c-l__9.align-middle
+                p c-col wrap c-l__9
+            .c-col.wrap.c-l__3.align-middle
+                p c-col wrap c-l__3
+
+        .c-row
+            .c-col.wrap.c-l__10.align-middle
+                p c-col wrap c-l__10
+            .c-col.wrap.c-l__2.align-middle
+                p c-col wrap c-l__2
+
+        .c-row
+            .c-col.wrap.c-l__11.align-middle
+                p c-col wrap c-l__11
+
+    section
+        .c-row.c-wysiwyg(style='margin-top:40px;padding-top:0px;border-top:1px solid #e0e0e0')
+            h1 .c-row.align-middle
+
+        .c-row.not-pdg.align-middle(style='background-color: rgba(86,61,124,.15);height:100px;')
+            .c-col.wrap.c-l__4.align-middle
+                p c-col wrap c-l__2
+            .c-col.wrap.c-l__4.align-middle
+                p c-col wrap c-l__2
+            .c-col.wrap.c-l__4.align-middle
+                p c-col wrap c-l__2
+
+        .c-row.c-wysiwyg
+            h1 .c-row.align-top
+
+        .c-row.not-pdg.align-top(style='background-color: rgba(86,61,124,.15);height:100px;')
+            .c-col.wrap.c-l__4.align-middle
+                p c-col wrap c-l__2
+            .c-col.wrap.c-l__4.align-middle
+                p c-col wrap c-l__2
+            .c-col.wrap.c-l__4.align-middle
+                p c-col wrap c-l__2
+
+        .c-row.c-wysiwyg
+            h1 .c-row.align-bottom
+
+        .c-row.not-pdg.align-bottom(style='background-color: rgba(86,61,124,.15);height:100px;')
+            .c-col.wrap.c-l__4.align-middle
+                p c-col wrap c-l__2
+            .c-col.wrap.c-l__4.align-middle
+                p c-col wrap c-l__2
+            .c-col.wrap.c-l__4.align-middle
+                p c-col wrap c-l__2
+
+
+    section
+        .c-row.c-wysiwyg(style='margin-top:40px;padding-top:0px;border-top:1px solid #e0e0e0')
+            h1 .c-row.align-left
+
+        .c-row.not-pdg.align-left(style='background-color: rgba(86,61,124,.15);')
+            .c-col.wrap.c-l__4.align-middle
+                p c-col wrap c-l__2
+        .c-row.c-wysiwyg
+            h1 .c-row.align-center
+
+        .c-row.not-pdg.align-center(style='background-color: rgba(86,61,124,.15);')
+            .c-col.wrap.c-l__4.align-middle
+                p c-col wrap c-l__2
+        .c-row.c-wysiwyg
+            h1 .c-row.align-right
+
+        .c-row.not-pdg.align-right(style='background-color: rgba(86,61,124,.15);')
+            .c-col.wrap.c-l__4.align-middle
+                p c-col wrap c-l__2

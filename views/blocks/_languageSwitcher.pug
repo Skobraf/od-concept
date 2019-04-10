@@ -1,0 +1,8 @@
+- var languages = ['FR', 'EN']
+.c-languageSwitcher
+    .c-current
+        span.c-lang Fr
+    ul.c-language__list.language-switcher-locale-url
+        each item, i in languages
+            li(data-lang=item)
+                a(href="")= item

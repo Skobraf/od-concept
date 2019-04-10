@@ -1,0 +1,20 @@
+// ========================================= //
+// align
+// ========================================= //
+
+@mixin alignBlockMiddle() {
+    display: flex;
+    align-items: center;
+}
+
+@mixin alignTextMiddle() {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@mixin alignTextMiddle__inline() {
+    display: inline-flex;
+    justify-content: center;
+    flex-direction: column;
+}

@@ -1,0 +1,112 @@
+.c-languageSwitcher {
+    width: rem(40);
+    height: rem(26);
+    margin-left: rem(20);
+    border: none;
+    color: $mainBranding;
+    // Don't forget to add c-bkg__select.svg in your project images folder
+    background: url(#{$img}c-bkg__select.svg) no-repeat top 50% right 0;
+    font-family: $wysiwyg--fonttitle;
+    font-weight: 700;
+    font-size: rem(13);
+    text-transform: uppercase;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .o-header.is-sticky & {
+        height: rem(15);
+    }
+
+    @include bp-lt($mobileS) {
+        margin-left: rem(10);
+    }
+
+    .c-lang {
+        display: block;
+        color: $mainBranding;
+        font-family: $wysiwyg--fontbody;
+        font-size: rem(14);
+
+        .o-header.is-sticky & {
+            font-size: rem(10);
+        }
+    }
+}
+
+.c-current {
+    cursor: pointer;
+    position: relative;
+    padding-right: rem(10);
+
+    .o-header.is-sticky & {
+        padding-right: rem(5);
+    }
+}
+
+.c-language__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: absolute;
+    width: 100%;
+    min-width: rem(60);
+    top: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: $ease--03;
+    pointer-events: none;
+    background: $white;
+    box-shadow: 0 rem(2) rem(8) rgba($mainBranding, 0.2);
+    z-index: -1;
+
+    @include bp-lt($medium) {
+        margin-top: 4px;
+    }
+
+    @include bp-lt($small) {
+        margin-top: -1px;
+    }
+
+    &.is-visible {
+        z-index: 100;
+        pointer-events: auto;
+        top: calc(100% + 12px);
+        opacity: 1;
+        visibility: visible;
+
+        @include bp-lt($small) {
+            top: calc(100% + 10px);
+        }
+    }
+
+    li {
+        text-align: center;
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+
+    a {
+        padding: rem(10) rem(10);
+        width: 100%;
+        display: block;
+        color: $mainBranding;
+        font-family: $wysiwyg--fontbody;
+        font-size: rem(14);
+        transition: $ease--03;
+
+        @include bp-lt($small) {
+            font-size: rem(13);
+        }
+
+        &:hover, &:focus {
+            background: $mainBranding;
+            color: $white;
+        }
+    }
+}

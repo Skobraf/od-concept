@@ -1,0 +1,44 @@
+// ========================================= //
+// modal
+// ========================================= //
+
+/* start state */
+.my-mfp-zoom-in .mfp-image-holder,
+.my-mfp-zoom-in .mfp-iframe-holder,
+.my-mfp-zoom-in .mfp-inline-holder {
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+    transform: scale(0.8);
+}
+
+/* animate in */
+.my-mfp-zoom-in.mfp-ready .mfp-image-holder,
+.my-mfp-zoom-in.mfp-ready .mfp-iframe-holder,
+.my-mfp-zoom-in.mfp-ready .mfp-inline-holder {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* animate out */
+.my-mfp-zoom-in.mfp-removing .mfp-image-holder,
+.my-mfp-zoom-in.mfp-removing .mfp-iframe-holder,
+.my-mfp-zoom-in.mfp-removing .mfp-inline-holder {
+    transform: scale(0.8);
+    opacity: 0;
+}
+
+/* Dark overlay, start state */
+.my-mfp-zoom-in.mfp-bg {
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+}
+
+/* animate in */
+.my-mfp-zoom-in.mfp-ready.mfp-bg {
+    opacity: 0.8;
+}
+
+/* animate out */
+.my-mfp-zoom-in.mfp-removing.mfp-bg {
+    opacity: 0;
+}

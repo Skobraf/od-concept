@@ -1,0 +1,17 @@
+// ========================================= //
+// clear.drupal
+// ========================================= //
+
+body.front,
+body.no-front {
+    //Clear module menu
+    ul li.leaf, ul li.expanded, ul li.collapsed{
+        list-style-type: none;
+        list-style-image: none;
+    }
+
+    //Clear Mothership theme
+    a:hover, a:focus { text-decoration: none; }
+}
+
+html body.admin-menu{ margin-top: 0!important; }

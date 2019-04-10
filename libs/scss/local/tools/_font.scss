@@ -1,0 +1,29 @@
+// ========================================= //
+// Font face mixin
+// ========================================= //
+
+$url-fonts : "../../media/fonts";
+
+//------ Mixin font families ------//
+@mixin m-fontFaces($folder, $fontNames, $separator) {
+    @each $fontM in $fontNames {
+        $i: index($fontNames, $fontM);
+        $subFolder : $folder + (if($separator, $separator, '-'));
+
+        // Map (list) of extensions and font formats
+        $formats : (
+            eot : 'embedded-opentype',
+            woff : 'woff',
+            ttf : 'truetype',
+            svg : 'svg#'
+        );
+        @each $ext, $format in $formats {
+            @font-face {
+                font-family: $subFolder + nth($fontNames, $i);
+                src: url('#{$url-fonts}/#{$folder}/' + nth($fontNames, $i) + '/#{$subFolder + $fontM}.#{$ext}') format($format);
+                font-weight: normal;
+                font-style: normal;
+            }
+        }
+    }
+}

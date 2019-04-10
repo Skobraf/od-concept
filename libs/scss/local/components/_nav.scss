@@ -1,0 +1,152 @@
+// ========================================= //
+// nav
+// ========================================= //
+
+.o-nav {
+    position: relative;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .c-nav__level0 {
+        display: block;
+        position: relative;
+        text-align: left;
+        width: 100%;
+        height: rem($nav--height);
+        @include clearfix;
+        @include inlineblockHolder;
+
+        > li {
+            position: relative;
+            display: inline-block;
+            width: auto;
+            @include inlineblockItem;
+
+            > a {
+                position: relative;
+                z-index: $zindex--hover;
+                height: rem($nav--height);
+                width: 100%;
+                padding-left: rem($nav--itemPadding);
+                padding-right: rem($nav--itemPadding);
+                text-align: center;
+                color: $nav--color;
+                font-family: $nav--fontfamily;
+                font-size: rem($nav--fontsize);
+                text-transform: uppercase;
+                transition: $ease--03;
+                background: transparent;
+                @include alignTextMiddle;
+                cursor: pointer;
+
+                &:hover, &.is-active {
+                    background: $nav--background--active;
+                    color: $nav--color--active;
+                }
+            }
+        }
+    }
+
+    .c-nav__level1 {
+        display: none;
+        position: absolute;
+        z-index: $zindex--content;
+        left: 0;
+        width: 100%;
+        min-width: rem($nav--item--level1--minWidth);
+        background: $nav--background--active;
+        padding-top: rem(24);
+        padding-bottom: rem(24);
+
+        &.is-visible {
+            display: block;
+        }
+
+        li {
+            display: block;
+            width: 100%;
+            padding-left: rem(24);
+            padding-right: rem(24);
+            margin-bottom: rem(10);
+            text-align: left;
+
+            @include bp-lt($desktop) {
+                margin-bottom: 0;
+                padding: 0;
+            }
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+
+        a {
+            position: relative;
+            display: inline-block;
+            font-size: rem(14);
+            font-family: $nav--fontfamily;
+            background: transparent;
+            transition: $ease--03;
+            color: $nav--color--active;
+
+            @include bp-lt($desktop) {
+                display: block;
+                width: 100%;
+                padding-top: rem(12);
+            }
+
+            &:before {
+                content: '>';
+                color:  $nav--color--active;
+                margin-right: rem(7);
+                transition: $ease--03;
+
+                @include bp-lt($desktop) {
+                    display: none;
+                }
+            }
+
+            &:after {
+                @include bp-lt($desktop) {
+                    display: none !important;
+                }
+            }
+
+            &:hover:before {
+                margin-right: rem(18);
+            }
+        }
+    }
+};
+
+.no-touchevents {
+    @include bp-lt(#{$nav--offcanvas--bp}px) {
+        .o-nav [class*="c-nav__level"] {
+            width: 100%;
+            max-width: rem($offCanvas--width);
+            overflow: hidden;
+        }
+    }
+
+};
+
+.no-touchevents {
+    .o-nav .c-nav__level0 > li:hover {
+        & > a {
+            background: $nav--background--active;
+            color: $nav--color--active;
+        }
+
+        .c-nav__level1 {
+            display: block;
+
+            @include bp-gt(#{$nav--offcanvas--bp}px) {
+                @include animation('displayNoneToFadeIn .4s 1');
+            }
+        }
+    }
+}

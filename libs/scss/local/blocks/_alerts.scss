@@ -1,0 +1,88 @@
+// ========================================= //
+// alerts
+// ========================================= //
+
+[class*='o-alert'] {
+    position: relative;
+    width: 100%;
+    height: rem(60);
+    border-radius: rem(5);
+    padding-left: rem(24);
+    padding-right: rem(24);
+    padding-right: rem(50);
+    margin-top: rem(24);
+    margin-bottom: rem(24);
+    @include clearfix;
+    @include alignBlockMiddle;
+
+    @include bp-lt($tablet) {
+        min-height: rem(60);
+        height: auto;
+        padding-top: rem(16);
+        padding-bottom: rem(12);
+    }
+
+    span {
+        display: inline-block;
+    }
+
+    .c-msg {
+        font-family: $alert--fontfamily;
+    }
+
+    [class*='c-fdbm'] {
+        position: relative;
+        top: rem(2);
+        margin-right: rem(14);
+    }
+
+    .c-fdbm__icon--error,
+    .c-fdbm__icon--success,
+    .c-fdbm__icon--info {
+        @include bp-lt($small) {
+            display: none;
+        }
+    }
+
+    .c-close {
+        position: absolute;
+        right: rem(24);
+        top: 50%;
+        transform: translatey(-50%);
+        width: rem(18);
+        height: rem(18);
+        opacity: .6;
+        transition: $ease--03;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    &[class*='--info'] {
+        background: $info;
+        border: solid 1px darken($info, 10%);
+
+        &, .c-close {
+            color: $alert--color--alt;
+        }
+    }
+
+    &[class*='--success'] {
+        background: $success;
+        border: solid 1px darken($success, 15%);
+
+        &, .c-close {
+            color: $alert--color;
+        }
+    }
+
+    &[class*='--error'] {
+        background: $error;
+        border: solid 1px darken($error, 15%);
+
+        &, .c-close {
+            color: $alert--color;
+        }
+    }
+}

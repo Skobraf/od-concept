@@ -1,0 +1,70 @@
+{
+    "bower" : {
+        "libs" : "bower_components",
+        "normalize" : "bower_components/normalize-css/normalize.css",
+        "foundation_styles" : "bower_components/foundation-sites/scss/**",
+        "foundation_vendor" : "bower_components/foundation-sites/_vendor/**",
+        "jquery" : [
+            "bower_components/jquery/dist/jquery.min.js"
+        ]
+    },
+
+    "styles" : {
+        "local_libs" : "libs/scss/local/**/*.scss",
+        "local_libs_magento" : "../sass/**/*.scss",
+        "local_build" : "app/assets/styles/local",
+        "local_build_magento" : "../css",
+        "vendor_libs" : "libs/scss/vendor",
+        "vendor_build" : "app/assets/styles/vendor"
+    },
+
+    "assets" : {
+        "images_src" : "graphics/images_raw",
+        "images_dest" : "app/assets/media/images"
+    },
+
+    "views" : {
+        "src" : [
+            "views/**/*.pug",
+            "!views/_*.pug",
+            "!views/**/_*.pug"
+        ],
+        "tpl" : [
+            "views/*.pug",
+            "views/**/*.pug"
+        ],
+        "build" : "app"
+    },
+
+    "scripts" : {
+        "src" : "app/assets/scripts/local/*.js",
+        "build" : "app/assets/scripts/vendor"
+    },
+
+    "fonticon" : {
+        "src_common" : "graphics/icons/*.svg",
+        "build_common" : "app/assets/media/fonts/dbm_common/",
+        "dist_common" : "../../media/fonts/dbm_common/",
+        "tpl_common" : "libs/tpl/dbm__common.css",
+        "src" : "app/assets/media/icons/",
+        "build" : "app/assets/media/fonts/iconfont/",
+        "tpl" : "libs/tpl/template__fonticon.css",
+        "src_template" : "views/mixins/_template__fonticon.pug",
+        "dist_template" : "views/blocks/",
+        "dist" : "../../media/fonts/iconfont/"
+    },
+
+    "browserslist" : ["> 1%", "last 2 versions", "ie 10"],
+
+    "themeColor" : "#FFFFFF",
+
+    "faviconPath" : {
+        "jsonPath" : "views",
+        "src" : "app/assets/media/favicon/favicon.png",
+        "dest" : "app/assets/media/favicon"
+    },
+
+    "projectType" : "default",
+
+    "projectName" : "My default name"
+}

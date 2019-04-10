@@ -1,0 +1,17 @@
+// ========================================= //
+// fontFamily
+// ========================================= //
+
+$iconFont : "iconfont";
+$iconFontDbm : "dbm__common";
+
+//------ *FONT NAME* ------//
+//- Font Name
+$fontname : 'FONT NAME';
+//- Font Weights
+$fontweights : 'Thin', 'Light', 'Bold', 'Medium', 'Regular';
+
+//- Options
+$separator : '--';
+
+@include m-fontFaces($fontname, $fontweights, false);

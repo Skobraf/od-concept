@@ -1,0 +1,62 @@
+{
+    "animate.css" : {
+        "checked" : true,
+        "jsPath" : [],
+        "cssPath" : ["animate.css/animate.min.css"]
+    },
+    "enquire" : {
+        "checked" : true,
+        "jsPath" : ["enquire/dist/enquire.min.js"],
+        "cssPath" : []
+    },
+    "fitvids" : {
+        "checked" : true,
+        "jsPath" : ["fitvids/jquery.fitvids.js"],
+        "cssPath" : []
+    },
+    "jquery-touch-events" : {
+        "checked" : true,
+        "jsPath" : ["jquery-touch-events/src/jquery.mobile-events.min.js"],
+        "cssPath" : []
+    },
+    "imagesloaded" : {
+        "checked" : true,
+        "jsPath" : ["imagesloaded/imagesloaded.pkgd.min.js"],
+        "cssPath" : []
+    },
+    "lodash" : {
+        "checked" : true,
+        "jsPath" : ["lodash/dist/lodash.min.js"],
+        "cssPath" : []
+    },
+    "magnific-popup" : {
+        "checked" : true,
+        "jsPath" : ["magnific-popup/dist/jquery.magnific-popup.min.js"],
+        "cssPath" : ["magnific-popup/dist/magnific-popup.css"]
+    },
+    "pickadate" : {
+        "checked" : true,
+        "jsPath" : ["pickadate/lib/picker.js", "pickadate/lib/picker.date.js"],
+        "cssPath" : ["pickadate/lib/themes/classic.css", "pickadate/lib/themes/classic.date.css"]
+    },
+    "slick-carousel" : {
+        "checked" : true,
+        "jsPath" : ["slick-carousel/slick/slick.min.js"],
+        "cssPath" : ["slick-carousel/slick/slick.css"]
+    },
+    "waypoints" : {
+        "checked" : true,
+        "jsPath" : ["waypoints/lib/jquery.waypoints.min.js", "waypoints/lib/shortcuts/sticky.min.js"],
+        "cssPath" : []
+    },
+    "jquery-mask-plugin" : {
+        "checked" : true,
+        "jsPath" : ["jquery-mask-plugin/dist/jquery.mask.min.js"],
+        "cssPath" : []
+    },
+    "jquery" : {
+        "checked" : true,
+        "jsPath" : ["jquery/dist/jquery.min.js"],
+        "cssPath" : []
+    }
+}

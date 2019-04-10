@@ -1,0 +1,73 @@
+// ========================================= //
+// links
+// ========================================= //
+
+@mixin link__underline($textColor--hover, $borderBackground, $borderHeight) {
+    position: relative;
+    display: inline-block;
+
+    &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: rem(-10);
+        width: 100%;
+        height: rem($borderHeight);
+        background: $borderBackground;
+        opacity: 0;
+        transition: $ease--03;
+        pointer-events: none;
+    }
+
+    &:hover, &:focus {
+        color: $textColor--hover;
+
+        &:after {
+            opacity: 1;
+            bottom: 0;
+        }
+    }
+}
+
+@mixin link__box($borderWidth, $borderColor) {
+    position: relative;
+    display: inline-block;
+
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 0;
+        height: 0;
+        opacity: 0;
+        transition: $ease--03;
+
+        .touchevents & {
+            @include bp-lt($small) {display: none;}
+        }
+    }
+
+    &:before {
+        top: -10%;
+        left: -10%;
+        border-top: solid rem($borderWidth) $borderColor;
+        border-left: solid rem($borderWidth) $borderColor;
+    }
+
+    &:after {
+        bottom: -10%;
+        right: -10%;
+        border-bottom: solid rem($borderWidth) $borderColor;
+        border-right: solid rem($borderWidth) $borderColor;
+    }
+
+    &:hover {
+        &:before,
+        &:after {
+            width: 120%;
+            height: 120%;
+            opacity: 1;
+        }
+    }
+}

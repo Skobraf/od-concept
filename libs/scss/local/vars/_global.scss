@@ -1,0 +1,22 @@
+// ========================================= //
+// global
+// ========================================= //
+
+$img                    : '../../media/images/' !default;
+$bezierValue            : cubic-bezier(.7, 0, .175, 1);
+$bezier                 : all .4s $bezierValue;
+$layoutWidth            : 90em !default;       //1440px
+$gutter                 : 10;
+
+// Transitions
+$ease--01 : all .1s ease;
+$ease--02 : all .2s ease;
+$ease--03 : all .3s ease;
+$ease--04 : all .4s ease;
+$ease--05 : all .5s ease;
+$ease--06 : all .6s ease;
+$ease--07 : all .7s ease;
+$ease--08 : all .8s ease;
+$ease--09 : all .9s ease;
+$ease--10 : all 1s ease;
+$ease--long : all .6s ease;

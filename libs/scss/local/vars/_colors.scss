@@ -1,0 +1,18 @@
+// ========================================= //
+// colors
+// ========================================= //
+
+$white : #ffffff !default;
+$black : #000000 !default;
+
+$error : #ce5959 !default;
+$success : #82bf71 !default;
+$info : #f0f0f0 !default;
+
+$mainBranding : $black !default;
+$subBranding : $white !default;
+
+$selectionColor : $white !default;
+$selectionBackground : $black !default;
+
+$mainFont : $subBranding !default;

@@ -1,0 +1,51 @@
+block vars
+    - var pageTitle = ''
+    - var pageClass = ''
+    - var cssDirLocal = 'assets/styles/local/'
+    - var cssDirVendor = 'assets/styles/vendor/'
+    - var imgDir = 'assets/media/images/'
+    - var mediaDir = 'assets/media/'
+    - var jsDirLocal = 'assets/scripts/local/'
+    - var jsDirVendor = 'assets/scripts/vendor/'
+    - var lang = 'fr'
+    - var headLess = false
+
+doctype html
+html
+    head
+        //- Title
+        title= pageTitle
+
+        //- Metas
+        include ../assets/_metas
+
+        //- Fonts
+        include ../assets/_fonts
+
+        //- Styles
+        include ../assets/_styles
+
+        //- Favicon
+        include ../assets/_favicon
+
+        //- Mixins
+        include ../mixins/_config
+
+    body(class= pageClass)
+        if(!headLess)
+            a.c-nav__close(href="")
+
+            include ../blocks/_header
+
+        block body
+
+        if(!headLess)
+            include ../blocks/_footer
+
+            a.c-action__gototop(href="", title="Haut de page")
+
+        //- Script
+        //-- vendor
+        include ../assets/_scripts
+        //-- local
+        block scripts

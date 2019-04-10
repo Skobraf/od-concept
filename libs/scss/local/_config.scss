@@ -1,0 +1,117 @@
+// ========================================= //
+// config
+// ========================================= //
+
+// Vars
+@import "vars/breakpoints";
+@import "vars/colors";
+@import "vars/colorsBranding";
+@import "vars/fontFamily";
+@import "vars/fontSize";
+@import "vars/global";
+@import "vars/sizes";
+@import "vars/zIndex";
+
+// breadcrumb
+$breadcrumb--height : 42;
+$breadcrumb--border : solid rem(1) $black;
+$breadcrumb--color : $black;
+$breadcrumb--color--alt : $black;
+$breadcrumb--fontfamily : 'Arial';
+$breadcrumb--fontsize : rem(13);
+$breadcrumb--offset : 0;
+
+// alert
+$alert--color : $white;
+$alert--color--alt : $black;
+$alert--fontfamily : 'Arial';
+
+// paginate
+$paginate--padding : 30;
+$paginate--background : $white;
+$paginate--color : $black;
+$paginate--fontfamily : 'Arial';
+$paginate--fontsize : 16;
+
+// nav + offcanvas
+$nav--height : 60;
+$nav--item--level1--minWidth : 200;
+$nav--background--active : $black;
+$nav--color : $black;
+$nav--color--active : $white;
+$nav--fontfamily : 'Arial';
+$nav--fontsize : 16;
+$nav--itemPadding : 24;
+$nav--offcanvas--bp : 1200;
+$nav--icon--background : $black;
+
+$offCanvas--offset--top : 0;
+$offCanvas--width : 280;
+$offcanvas--nav--item--height : 45;
+
+// inputs
+$input--border--color: $black;
+$input--border--width: 1;
+$input--height: 48;
+$input--margin: 24;
+$input--background: $white;
+$input--color : $black;
+$input--placeholder--color : $black;
+
+$label--color: $black;
+$label--fontfamily: 'Arial';
+$label--fontsize: 16;
+$label--required--color: $label--color;
+
+$checkboxRadio--width: 14;
+$checkboxRadio--background: $black;
+
+$gototop--width: 45;
+$gototop--bottom: 14;
+$gototop--right: 14;
+$gototop--background: $black;
+$gototop--hover: $black;
+$gototop--borderRadius: 50%;
+
+// buttons
+$button--height: 50;
+$button--border--width: 1;
+$button--border--type: solid;
+$button--padding: 20;
+$button--margin: 5;
+
+$button--background: $mainBranding;
+$button--border--color: $mainBranding;
+$button--color: $white;
+$button--border--color--hover: darken($button--background, 10%);
+$button--background--hover: darken($button--background, 10%);
+$button--color--hover: $white;
+
+$button--background--alt: $white;
+$button--border--color--alt: $subBranding;
+$button--color--alt: $subBranding;
+$button--border--color--alt--hover: $subBranding;
+$button--background--alt--hover: $subBranding;
+$button--color--alt--hover: $white;
+
+// wysiwyg
+$wysiwyg--fontbody : 'Arial';
+$wysiwyg--fonttitle : 'Arial';
+$wysiwyg--items--margin--bottom: 24;
+
+$wysiwyg--h2--color: $black;
+$wysiwyg--h3--color: $black;
+$wysiwyg--h4--color: $black;
+$wysiwyg--h5--color: $black;
+$wysiwyg--h6--color: $black;
+$wysiwyg--link--color: $black;
+$wysiwyg--link--color--hover: $subBranding;
+$wysiwyg--link--transition : $ease--03;
+$wysiwyg--list--style--color: $black;
+$wysiwyg--list--style--li--paddingLeft: 20;
+$wysiwyg--table--border--color: $black;
+$wysiwyg--content--color: $black;
+$wysiwyg--table--th--color: $white;
+
+$wysiwyg--hr--background: $black;
+$wysiwyg--table--th--background: $black;

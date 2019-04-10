@@ -1,0 +1,131 @@
+//- layout
+extends layouts/_default
+
+//- settings
+append vars
+    - var pageTitle = 'myAwesomePageTitle'
+    - var pageClass = ''
+
+append body
+    .row
+        .columns
+            h2 BreadCrumb
+            +c-breadcrumb(['item 1', 'item 2', 'item 3'])
+
+    .row
+        .columns
+            h2 Fonticons
+            include blocks/_template__fonticon
+
+    .row
+        .columns
+            h2 Fonticons
+            include blocks/_languageSwitcher
+
+
+    .row
+        .columns
+            h2 Alert message
+            .o-alert--error
+                span.c-fdbm__icon--error
+                span.c-msg Message d’erreur lorem ipsum dolor sit amet
+                a.c-close(href=""): span.c-fdbm__icon--cross
+
+            .o-alert--success
+                span.c-fdbm__icon--success
+                span.c-msg Message de validation lorem ipsum dolor sit amet
+                a.c-close(href=""): span.c-fdbm__icon--cross
+
+            .o-alert--info
+                span.c-fdbm__icon--info
+                span.c-msg Message d’information lorem ipsum dolor sit amet
+                a.c-close(href=""): span.c-fdbm__icon--cross
+
+    .row
+        .columns
+            h2 Link
+            p: a.o-link__underline(href="") Link underline
+            p: a.o-link__box(href="") Link box
+
+    .row
+        .columns
+            h2 Nav
+            include blocks/_nav--primary
+
+    .row
+        .columns
+            h2 Inputs
+            .row
+                .columns.small-12.medium-6: +input--text('Input text 01', true, 'input--text--01')
+                .columns.small-12.medium-6: +input--text('Input text 02', false, 'input--text--02')
+
+            .row
+                .columns.medium-6: +select('Select', ['Option 01', 'Option 02', 'Option 03', 'Option 04'])
+
+            .row
+                .columns: +textarea('Textarea 01', true, 'textarea--01')
+
+            .row
+                .column.medium-6
+                    .c-input__holder
+                        .c-label Lorem ipsum dolor sit amet ?
+                        - for (var i = 0; i < 4; i++)
+                            .c-checkbox
+                                label(for="checkbox--0"+i)
+                                    input(type="checkbox" id="checkbox--0"+i name="checkbox")
+                                    span: +lipsum(3, 'words')
+
+                .column.medium-6
+                    .c-input__holder
+                        .c-label Lorem ipsum dolor sit amet ?
+                        - for (var i = 0; i < 4; i++)
+                            .c-radio
+                                label(for="radio--0"+i)
+                                    input(type="radio" id="radio--0"+i name="radio")
+                                    span: +lipsum(3, 'words')
+
+            .row
+                .columns.medium-6
+                    .c-input__holder
+                        .c-form__item--file
+                            input(type="text" placeholder="Ajouter un fichier" readonly)
+                            .c-form__input--file
+                                input(type="file")
+
+    .row
+        .columns
+            h2 Pagination
+    include blocks/_paginate
+    .row
+        .columns
+            h2 Pagination scroll responsive
+    include blocks/_paginate-responsive
+
+
+    .row
+        .columns
+            h2 Boutons
+
+                    h3 input type="button"
+                    input.c-button--main(type="button", value="Bouton principal")
+                    input.c-button--alt(type="button", value="Bouton secondaire")
+
+            .row
+                .columns
+                    h3 button
+                    button.c-button--main Bouton principal
+                    button.c-button--alt Bouton secondaire
+
+            .row
+                .columns
+                    h3 a-href
+                    a.c-button--main(href="button") Bouton principal
+                    a.c-button--alt(href="button") Bouton secondaire
+
+    .row
+        .columns
+            h2 Wysiwyg content
+    //- .row
+    //-     .columns
+    //-         .c-wysiwyg
+    //-             include blocks/_wysiwyg--content

@@ -1,0 +1,14 @@
+//- Generate picture tag with srcset attribute for responsive
+mixin picture(imgLarge, imgMedium, imgSmall)
+    
+    - var bpLarge   = '1440px'
+    - var bpMedium  = '1024px'
+    - var bpSmall   = '640px'
+
+    picture
+        if (imgSmall !== '')
+            source(media="(max-width: #{bpSmall})", srcset="#{imgSmall}")
+        if (imgMedium !== '')
+            source(media="(max-width: #{bpMedium})", srcset="#{imgMedium}")
+
+        img(src="#{imgLarge}")

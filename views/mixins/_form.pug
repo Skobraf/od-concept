@@ -1,0 +1,28 @@
+mixin input--text(label, required, id)
+    .c-input__holder
+        if(required)
+            label(for= id)
+                | #{label}
+                span.is-required *
+        else
+            label= label
+
+        input(type="text", id= id)
+
+mixin select(label, options)
+    .c-input__holder
+        label= label
+        select
+            each option in options
+                option= option
+
+mixin textarea(label, required, id)
+    .c-input__holder.is-tall
+        if(required)
+            label(for= id)
+                | #{label}
+                span.is-required *
+        else
+            label= label
+
+        textarea(id= id)

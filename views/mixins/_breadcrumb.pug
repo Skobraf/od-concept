@@ -1,0 +1,11 @@
+//- Generate c-breadcrumb
+mixin c-breadcrumb(labels)
+    section.c-breadcrumb
+        .row: .columns
+            ul.c-breadcrumb__list
+                each label, index in labels
+                    if index + 1 !== labels.length
+                        li
+                            a(href="")= label
+                    else
+                        li= label

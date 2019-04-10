@@ -1,0 +1,24 @@
+// ========================================= //
+// whitespace
+// ========================================= //
+
+@mixin inlineblockHolder() {
+    letter-spacing: -0.31em;
+    text-rendering: optimizespeed;
+    font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
+}
+
+@mixin inlineblockItem() {
+    display: inline-block;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-rendering: auto;
+}
+
+.o-inlineblock--holder {
+    @include inlineblockHolder;
+}
+
+.o-inlineblock--item {
+    @include inlineblockItem;
+}

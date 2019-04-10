@@ -1,0 +1,29 @@
+// ========================================= //
+// placeholder
+// ========================================= //
+
+// Change placeholder color
+// Internet Explorer 10+ (!)
+@mixin placeholder-color($color) {
+    &::-webkit-input-placeholder { /* WebKit browsers */
+        color:$color;
+        line-height: rem($input--height/2);
+    }
+    &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+        color:$color;
+        opacity:1;
+    }
+    &::-moz-placeholder { /* Mozilla Firefox 19+ */
+        color:$color;
+        opacity:1;
+    }
+    &:-ms-input-placeholder { /* Internet Explorer 10+ */
+        color:$color;
+    }
+}
+
+textarea {
+    &::-webkit-input-placeholder { /* WebKit browsers */
+        line-height: inherit !important;
+    }
+}

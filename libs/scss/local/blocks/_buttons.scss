@@ -1,0 +1,85 @@
+// ========================================= //
+// buttons
+// ========================================= //
+
+
+.c-action__gototop {
+    position: fixed;
+    bottom: rem($gototop--bottom);
+    right: rem($gototop--right);
+    display: block;
+    width: rem($gototop--width);
+    height: rem($gototop--width);
+    background: $gototop--background;
+    border: none;
+    border-radius: $gototop--borderRadius;
+    margin: 0;
+    opacity: 0;
+    transform: translateY(200%);
+    pointer-events: none;
+    padding: 0;
+    z-index: $zindex--fixed - 1;
+    transition: $ease--03;
+
+    @include bp-lt($small) {
+        bottom: rem($gototop--bottom - 5);
+        right: rem($gototop--right - 5);
+    }
+
+    &:before {
+        position: absolute;
+        vertical-align: middle;
+        font-family: $iconFontDbm;
+        content: '\EA04';
+        color: $white;
+        left: 50%;
+        top: 45%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+
+    &.is-visible {
+        opacity: .6;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
+
+    &:hover, &:focus, &:active {
+        opacity: 1;
+        background: $gototop--hover;
+    }
+}
+
+[class*='c-button'] {
+    height: rem($button--height);
+    padding-left: rem($button--padding);
+    padding-right: rem($button--padding);
+    margin-left: rem($button--margin);
+    margin-right: rem($button--margin);
+    transition: $ease--03;
+    cursor: pointer;
+    @include alignTextMiddle__inline;
+
+    &[class*='--main'] {
+        background: $button--background;
+        color: $button--color;
+        border: $button--border--type rem($button--border--width) $button--border--color;
+
+        &:hover {
+            background: $button--background--hover;
+            color: $button--color--hover;
+            border-color: $button--border--color--hover;
+        }
+    }
+
+    &[class*='--alt'] {
+        background: $button--background--alt;
+        color: $button--color--alt;
+        border: $button--border--type rem($button--border--width) $button--border--color--alt;
+
+        &:hover {
+            background: $button--border--color--alt--hover;
+            color: $button--color--alt--hover;
+            border-color: $button--background--alt--hover;
+        }
+    }
+}

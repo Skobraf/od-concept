@@ -1,0 +1,10 @@
+- var color1 = '23272b'
+- var color2 = 'ffcc33'
+
+//- Generate image from placehold.it
+mixin placeholder__placeHoldit(width, height, label)
+    - width = width || '150'
+    - height = height || '150'
+    - label = label || width +'x'+ height
+    - var link = width + "x" + height + "/" + color1 + "/" + color2 + "?text=" +label
+    img(src="https://placehold.it/" + link, alt="" )
