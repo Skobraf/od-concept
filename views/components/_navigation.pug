@@ -1,0 +1,23 @@
+.o-nav
+    - var navLevel0 = [' nos marques', ' level 0 - 2', 'Nav level 0 - 3 - child', 'Nav level 0 - 4 - child', 'Nav level 0 - 5']
+    - var navLevel1 = [['Nav level 1 - 1', 'Nav level 1 - 2', 'Nav level 1 - 3', 'Nav level 1 - 4', 'Nav level 1 -  5'], [], ['Nav level 1 - 1', 'Nav level 1 - 2', 'Nav level 1 - 3', 'Nav level 1 - 4', 'Nav level 1 -  5'], ['Nav level 1 - 1', 'Nav level 1 - 2', 'Nav level 1 - 3', 'Nav level 1 - 4', 'Nav level 1 -  5'], []]
+
+    ul.c-nav__level0
+        each label0, indexI in navLevel0
+            li
+                - if(!navLevel1[indexI].length)
+                    a(href="")= label0
+
+                - else if(navLevel1[indexI].length)
+                    a(aria-haspopup="true")= label0
+                    .c-nav__show: span.c-fdbm__icon--arrowRight
+
+                    ul.c-nav__level1
+                        li.c-nav__hide
+                            span.c-fdbm__icon--arrowLeft
+                            span.c-text= label0
+
+                        each label1 in navLevel1[indexI]
+                            li: a(href="")= label1
+
+.c-nav__icon: span

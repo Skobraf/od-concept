@@ -41,10 +41,13 @@ $navColor : $white;
                 a {
                     padding-left: rem(20);
                     padding-right: rem(20);
+                    padding-bottom: rem(20);
                     height: rem($offcanvas--nav--item--height);
                     text-align: left;
                     color: $navColor;
-
+                    &::after {
+                        content: none;
+                    }
                     &:hover {
                         background: $navColor;
                         color: $navBackgrond;

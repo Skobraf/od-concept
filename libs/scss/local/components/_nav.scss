@@ -29,25 +29,53 @@
             > a {
                 position: relative;
                 z-index: $zindex--hover;
-                height: rem($nav--height);
+                height: rem(70);
                 width: 100%;
+                padding-top: 32px;
                 padding-left: rem($nav--itemPadding);
                 padding-right: rem($nav--itemPadding);
                 text-align: center;
                 color: $nav--color;
                 font-family: $nav--fontfamily;
-                font-size: rem($nav--fontsize);
+                font-size: rem(14);
+                font-weight: bold;
                 text-transform: uppercase;
                 transition: $ease--03;
                 background: transparent;
                 @include alignTextMiddle;
+                display: -webkit-inline-box;
                 cursor: pointer;
-
+                &:after {
+                    position: relative;
+                    bottom: 4px;
+                    content: "";
+                    margin-left: 45px;
+                    height: 5px;
+                    width: 5px;
+                    background: $baby_blue;
+                    border-radius: 50%;
+                    display: inline-block;
+                    }
                 &:hover, &.is-active {
-                    background: $nav--background--active;
-                    color: $nav--color--active;
+                    color: $nav--color;
                 }
             }
+            &:last-child {
+                > a{
+                    color: $baby_blue;
+                    background-color: rgba(124, 220, 250, 0.15);
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+            &:nth-last-child(2) {
+                > a{
+                    &:after {
+                        display: none;
+                    }
+                }
+              }
         }
     }
 
@@ -58,7 +86,7 @@
         left: 0;
         width: 100%;
         min-width: rem($nav--item--level1--minWidth);
-        background: $nav--background--active;
+        // background: $nav--background--active;
         padding-top: rem(24);
         padding-bottom: rem(24);
 
@@ -88,10 +116,11 @@
             position: relative;
             display: inline-block;
             font-size: rem(14);
+            font-weight: bold;
             font-family: $nav--fontfamily;
             background: transparent;
             transition: $ease--03;
-            color: $nav--color--active;
+            color: $nav--color;
 
             @include bp-lt($desktop) {
                 display: block;
@@ -101,7 +130,7 @@
 
             &:before {
                 content: '>';
-                color:  $nav--color--active;
+                color:  $baby_blue;
                 margin-right: rem(7);
                 transition: $ease--03;
 
@@ -137,8 +166,7 @@
 .no-touchevents {
     .o-nav .c-nav__level0 > li:hover {
         & > a {
-            background: $nav--background--active;
-            color: $nav--color--active;
+            border-bottom: 3px solid $baby_blue;
         }
 
         .c-nav__level1 {

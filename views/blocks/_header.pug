@@ -1,2 +1,8 @@
 header.o-header
-    .row: .columns header
+    .row
+        .columns_nav 
+            .logo
+                a(href="#")
+                    img(src=imgDir +"logo.png", alt="")
+                p Toute la lumiere
+            include _navigation

@@ -1,3 +1,41 @@
 // ========================================= //
 // header
+.o-header {
+    display: block;
+    height: 96px;
+}
+.columns_nav {
+        display: flex;
+        justify-content: space-between;
+        .logo {
+            display: flex;
+            color: $baby_blue;
+            margin-left: auto;
+            margin-right: auto;
+            padding-top: 5px;
+            padding-left: 12px;
+            p {
+                display: none;
+            }
+        }
+    @include bp-gt(#{$nav--offcanvas--bp}px) {
+        display: flex;
+        justify-content: space-between;
+        .logo {
+            margin: 0;
+            p {
+                position: relative;
+                top: 22px;
+                left: 10px;
+                font-style: italic;
+                font-size: 16px;
+                font-weight:bold;
+                display: inline;
+            }
+        }
+    }
+    
+}
 // ========================================= //
+
+
