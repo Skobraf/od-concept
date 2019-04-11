@@ -21,13 +21,36 @@
     }
 }
 .main_text {
+    text-align: right;
     color: white;
     position: relative;
     z-index: 2;
     bottom: 460px;
     right: 100px;
     margin-right: 0;
-    float: right;
+    //float: right;
+    img {
+        position: relative;
+        bottom: 35px;
+        float: right;
+    }
+    .decouvrir {
+        position: relative;
+        z-index: 1;
+        font-size: 12px;
+        margin-right: 24px;
+    }
+    h1 {
+        font-size: 40px;
+        margin-bottom: 10px;
+    }
+    span {
+        font-style: italic;
+        font-size: 32px;
+        p {
+            margin-top: 0;
+        }
+    }
 }
 a {
     color: inherit;
