@@ -1,0 +1,34 @@
+
+.main_image {
+    position: relative;
+    img {
+        position: relative;
+        width:100%;
+    }
+    &::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: rgb(27,182,255);
+        background: linear-gradient(258deg, rgba(27,182,255,1) 0%, rgba(27,182,255,1) 6%, rgba(14,251,241,0) 70%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+    }
+}
+.main_text {
+    color: white;
+    position: relative;
+    z-index: 2;
+    bottom: 460px;
+    right: 100px;
+    margin-right: 0;
+    float: right;
+}
+a {
+    color: inherit;
+}
