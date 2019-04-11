@@ -31,6 +31,7 @@
                 height: rem(70);
                 width: 100%;
                 padding-top: 32px;
+                padding-bottom: 61px;
                 padding-left: rem($nav--itemPadding);
                 padding-right: rem($nav--itemPadding);
                 text-align: center;
@@ -85,7 +86,7 @@
         left: 0;
         width: 100%;
         min-width: rem($nav--item--level1--minWidth);
-        // background: $nav--background--active;
+        background: white;
         padding-top: rem(24);
         padding-bottom: rem(24);
 
@@ -165,7 +166,7 @@
 .no-touchevents {
     .o-nav .c-nav__level0 > li:hover {
         & > a {
-            border-bottom: 3px solid $baby_blue;
+           // border-bottom: 3px solid $baby_blue;
         }
 
         .c-nav__level1 {
