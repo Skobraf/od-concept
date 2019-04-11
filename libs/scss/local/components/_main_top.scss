@@ -25,10 +25,13 @@
     color: white;
     position: relative;
     z-index: 2;
-    bottom: 460px;
+    bottom: 300px;
     right: 100px;
     margin-right: 0;
     //float: right;
+    @include bp-gt(#{$nav--offcanvas--bp}px) {
+        bottom: 460px;
+    }
     img {
         position: relative;
         bottom: 35px;
