@@ -1,15 +1,16 @@
 $show_font: 40px;
+$hover_color: #0a84bfad;
 .showroom_text {
     bottom: 118px;
     color: white;
     position: relative;
-    padding: 1px 0;
+    height: 85px;
     &::before {
         content: "";
         display: block;
         width: 100%;
         height: 100%;
-        background: #0a84bf78;
+        background: $hover_color;
         position: absolute;
         top: 0;
         left: 0%;
@@ -37,6 +38,7 @@ $show_font: 40px;
 }
 @include bp-gt($medium) {
     .showroom_text {
+        text-align: left;
         &::before {
             content: none;
         }
@@ -68,13 +70,15 @@ $show_font: 40px;
         position: relative;
         img {
             width: 100%;
+            height: 460px;
+            object-fit: cover;
         }
         &::before {
             content: "";
             display: block;
             width: 100%;
             height: 100%;
-            background: #0a84bfad;
+            background: $hover_color;
             position: absolute;
             top: 0;
             left: -50%;
