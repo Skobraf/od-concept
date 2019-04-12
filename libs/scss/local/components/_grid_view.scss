@@ -1,62 +1,79 @@
-/* Variables
-================================== */
-$bw: 2px;  // border width
+// /* Variables
+// ================================== */
+// $bw: 2px;  // border width
 
 
-/* Tables
-================================== */
-.gird_acomp {
-    position: relative;
-    &::before {
-        content: "";
-        display: block;
-        width: 100%;
-        height: 100%;
-        background: #47b4e81f;
-        position: absolute;
-        top: -23%;
-        left: -25%;
-        right: 0;
-        bottom: 0;
-    }
-}
-.colmuns_grid {
-    max-width: 1440px;
-    margin: 0 auto;
-    text-align: center;
-    p {
-        color: $baby_blue;
-        margin-bottom: 5%;
-    }
-}
-.Rtable {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 0 3em 0;
-  padding: 0;
-}
-.Rtable-cell {
+// /* Tables
+// ================================== */
+// .gird_acomp {
+//     position: relative;
+//     &::before {
+//         content: "";
+//         display: block;
+//         width: 100%;
+//         height: 100%;
+//         background: #47b4e81f;
+//         position: absolute;
+//         top: -23%;
+//         left: -25%;
+//         right: 0;
+//         bottom: 0;
+//     }
+// }
+// .colmuns_grid {
+//     max-width: 1440px;
+//     margin: 0 auto;
+//     text-align: center;
+//     p {
+//         color: $baby_blue;
+//         margin-bottom: 5%;
+//     }
+// }
+// .Rtable {
+//   display: flex;
+//   flex-wrap: wrap;
+//   margin: 0 0 3em 0;
+//   padding: 0;
+// }
+// .Rtable-cell {
+//     img {
+//         margin: 0 auto;
+//         width: 80%;
+//     }
+//   box-sizing: border-box;
+//   flex-grow: 1;
+//   width: 100%;  // Default to full width
+//   padding: 0.8em 1.2em;
+//   overflow: hidden; // Or flex might break
+//   list-style: none;
+//   border: solid $bw #47b4e81f;
+// }
+
+// /* Table column sizing
+// ================================== */
+// .Rtable--2cols > .Rtable-cell  { width: 50%; }
+// .Rtable--3cols > .Rtable-cell  { width: 33.33%; }
+// .Rtable--4cols > .Rtable-cell  {
+//     width: 20%;
+//     padding: 3%;
+//     background: white;
+// }
+// .Rtable--5cols > .Rtable-cell  { width: 20%; }
+// .Rtable--6cols > .Rtable-cell  { width: 16.6%; }
+
+.grid_view {
     img {
-        margin: 0 auto;
-        width: 80%;
+        width: 100px;
     }
-  box-sizing: border-box;
-  flex-grow: 1;
-  width: 100%;  // Default to full width
-  padding: 0.8em 1.2em;
-  overflow: hidden; // Or flex might break
-  list-style: none;
-  border: solid $bw #47b4e81f;
 }
-
-/* Table column sizing
-================================== */
-.Rtable--2cols > .Rtable-cell  { width: 50%; }
-.Rtable--3cols > .Rtable-cell  { width: 33.33%; }
-.Rtable--4cols > .Rtable-cell  {
-    width: 20%;
-    padding: 3%;
-    background: white;
+.grid_column {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 24px;
+    @include bp-gt(#{$nav--offcanvas--bp}px) {
+        justify-content: space-between
+    }
 }
-.Rtable--5cols > .Rtable-cell  { width: 20%; }
-.Rtable--6cols > .Rtable-cell  { width: 16.6%; }
+.grid_height {
+    margin-top: 45px;
+}

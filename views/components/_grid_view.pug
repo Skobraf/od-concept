@@ -1,8 +1,11 @@
 h1 Ils nous accomopagnent
 p OD Concept, le partenaire des plus grandes marque pur vos illuminations
-.Rtable.Rtable--4cols
-    - var gridBase= [imgDir + "marque.png", imgDir + "marque.png", imgDir + "marque.png", imgDir + "marque.png", imgDir + "marque.png", imgDir + "marque.png", imgDir + "marque.png", imgDir + "marque.png", imgDir + "marque.png", imgDir + "marque.png", imgDir + "marque.png", imgDir + "marque.png", imgDir + "marque.png", imgDir + "marque.png", imgDir + "marque.png"]
+.c-row
+    - var gridBase= [[imgDir + "marque.png", imgDir + "marque.png", imgDir + "marque.png"], [imgDir + "marque.png", imgDir + "marque.png", imgDir + "marque.png"], [imgDir + "marque.png", imgDir + "marque.png", imgDir + "marque.png"], [imgDir + "marque.png", imgDir + "marque.png", imgDir + "marque.png"], [imgDir + "marque.png", imgDir + "marque.png", imgDir + "marque.png"]]
 
     each imgSrc in gridBase
-        .Rtable-cell
-            img(src=imgSrc, alt="")
+        .c-col.wrap.c-l__6.grid_height.c-m__12
+            .c-row.grid_column
+                each Src in imgSrc
+                    .col.wrap.c-l__2.grid_view
+                        img(src=Src, alt="")
