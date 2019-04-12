@@ -7,16 +7,21 @@
 }
 
 .grid_height {
-    margin-bottom: 2px;
-    padding-top: 40px !important;
-    padding-bottom: 40px !important;
-    border: 1px solid;
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
+    border: 2px solid #e9f6fc;
     justify-content: center;
     background: white;
 }
-
+.columns_grid {
+    text-align: center;
+    p {
+        color: $baby_blue;
+    }
+}
 .c-slider {
         position: relative;
+        border: 1px solid #e9f6fc;
         &::before {
             content:"";
             display: block;
@@ -25,7 +30,7 @@
             background: #47b4e81f;
             position: absolute;
             top: -34%;
-            left: -18%;
+            left: -17.6%;
             right: 0;
             bottom: 0;
             z-index: -1;
