@@ -5,7 +5,6 @@
         width: 100px;
     }
 }
-
 .grid_height {
     padding-top: 50px !important;
     padding-bottom: 50px !important;
@@ -22,7 +21,8 @@
 .c-slider {
         position: relative;
         border: 1px solid #e9f6fc;
-        &::before {
+        @include bp-gt($medium) {
+             &::before {
             content:"";
             display: block;
             width: 100%;
@@ -35,4 +35,6 @@
             bottom: 0;
             z-index: -1;
         }
+        }
+       
 }
