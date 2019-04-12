@@ -1,11 +1,8 @@
 h1 Ils nous accomopagnent
 p OD Concept, le partenaire des plus grandes marque pur vos illuminations
-.c-row
+.c-row.c-slider
     - var gridBase= [[imgDir + "marque.png", imgDir + "marque.png", imgDir + "marque.png"], [imgDir + "marque.png", imgDir + "marque.png", imgDir + "marque.png"], [imgDir + "marque.png", imgDir + "marque.png", imgDir + "marque.png"], [imgDir + "marque.png", imgDir + "marque.png", imgDir + "marque.png"], [imgDir + "marque.png", imgDir + "marque.png", imgDir + "marque.png"]]
-
-    each imgSrc in gridBase
-        .c-col.wrap.c-l__6.grid_height.c-m__12
-            .c-row.grid_column
-                each Src in imgSrc
-                    .col.wrap.c-l__2.grid_view
-                        img(src=Src, alt="")
+    -var  listItems = [imgDir + "marque.png", imgDir + "marque.png", imgDir + "marque.png", imgDir + "marque.png", imgDir + "marque.png", imgDir + "marque.png", imgDir + "marque.png", imgDir + "marque.png", imgDir + "marque.png", imgDir + "marque.png", imgDir + "marque.png"]
+    each imgSrc in listItems
+        .c-col.wrap.c-l__2.grid_height.c-m__12
+            img(src=imgSrc, alt="")

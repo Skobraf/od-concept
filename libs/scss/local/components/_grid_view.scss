@@ -71,7 +71,8 @@
     justify-content: space-evenly;
     margin: 24px;
     @include bp-gt(#{$nav--offcanvas--bp}px) {
-        justify-content: space-between
+        justify-content: space-between;
+       
     }
 }
 .grid_height {
