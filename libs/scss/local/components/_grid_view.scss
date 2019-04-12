@@ -15,7 +15,7 @@
     background: white;
 }
 
-.colmuns_grid {
+.c-slider {
         position: relative;
         &::before {
             content:"";
@@ -24,9 +24,10 @@
             height: 100%;
             background: #47b4e81f;
             position: absolute;
-            top: -25%;
-            left: -25%;
+            top: -34%;
+            left: -18%;
             right: 0;
             bottom: 0;
+            z-index: -1;
         }
 }
