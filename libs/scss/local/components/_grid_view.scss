@@ -18,6 +18,32 @@
         color: $baby_blue;
     }
 }
+.nos_marque {
+    p {
+        color: black;
+        font-size: 9px;
+        font-weight: bold;
+        margin-right: 1.5%;
+    }
+    img {
+        z-index: -1;
+        position: relative;
+        bottom: 24px;
+        height: 20px;
+        margin: 0 auto;
+        left: 45px;
+    }
+}
+@include bp-gt($medium) {
+    .nos_marque {
+        text-align: right;
+        margin-right: 2%;
+        img {
+            float: right;
+            left: 0;
+        }
+    }
+}
 .c-slider {
         position: relative;
         border: 1px solid #e9f6fc;
@@ -36,5 +62,6 @@
             z-index: -1;
         }
         }
-       
 }
+
+
