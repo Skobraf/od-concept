@@ -1,0 +1,18 @@
+.metier-view {
+    display: flex;
+    background: #e9f6fc;
+    padding: 0;
+    img {
+        width:660px;
+        height: 320px;
+        object-fit: cover;
+    }
+    p {
+        font-size: 12px;
+        line-height: 2;
+    }
+}
+.metier-details {
+    margin: 50px 100px;
+    max-width: 360px;
+}
