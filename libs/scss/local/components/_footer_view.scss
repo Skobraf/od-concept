@@ -1,14 +1,15 @@
-
+$footer-height: 130px;
 .contact-details {
     text-align: center;
     display: inline-block !important;
     background:$baby_blue;
     color: white;
+    height: $footer-height;
 }
 .footer_view {
     max-width: 100%;
-    height: 130px;
     padding: 0 !important;
+    flex-direction: row-reverse;
 }
 .number {
     background: none;
@@ -23,5 +24,13 @@
     padding: 10px 40px;
     cursor: pointer;
     color: black;
+}
+
+.adress-info {
+    justify-content: space-evenly;
+    height: $footer-height;
+}
+.adress-details {
+    font-size: 12px;
 }
 
