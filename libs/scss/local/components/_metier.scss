@@ -1,7 +1,9 @@
-.metier-view {
-    display: flex;
+.meta_view {
+    display: flex !important;
     background: #e9f6fc;
     padding: 0;
+
+    height: 320px;
     img {
         width:660px;
         height: 320px;
@@ -12,7 +14,11 @@
         line-height: 2;
     }
 }
+.metier-slides {
+    width: 100%
+}
 .metier-details {
     margin: 50px 100px;
     max-width: 360px;
 }
+
