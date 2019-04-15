@@ -5,6 +5,13 @@
     padding: 0;
     width: 500px;
     height: 320px;
+    &::after {
+        content: "1/4";
+        position: relative;
+        left: 140px;
+        bottom: 134px;
+        transform: rotate(-90deg)
+    }
     img {
         display: none;
         width:660px;
@@ -20,6 +27,9 @@
     p {
         font-size: 12px;
         line-height: 2;
+    }
+    span {
+        font-weight: bold;
     }
 }
 .metier-slides {
