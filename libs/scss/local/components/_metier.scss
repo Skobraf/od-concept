@@ -45,6 +45,20 @@
 .metier-details {
     margin: 50px 100px;
     max-width: 360px;
+    &::before {
+        content: "1.";
+        font-size: 62px;
+        position: absolute;
+        top: 20px;
+        left: 20%;
+        font-weight: bold;
+        color: $baby_blue;
+    }
+    @include bp-gt($small) {
+        &::before{
+        left: 30.5%;
+        }
+    }
 }
 
 .slick-next {
